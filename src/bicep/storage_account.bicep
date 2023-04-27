@@ -12,6 +12,6 @@ properties:{
   minimumTlsVersion: 'TLS1_2'
 }
 sku: {
-  name: 'Premium_LRS'
+  name: 'Standard_LRS'
 }
 }
