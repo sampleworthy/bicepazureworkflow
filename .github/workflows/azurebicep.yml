@@ -35,7 +35,7 @@ jobs:
       - name: az bicep deploy
         working-directory: '${{github.workspace}}/src/bicep'
         run: |
-            az deployment group create --what-if --resource-group APIMTesting --template-file ./storage_account.bicep
+            az deployment group create --what-if --resource-group APIMTesting --template-file ./storage_account.bicep --parameters @parameters.json
             
   Storage-Account-Azure-Deployment:
     name: 'AZ Storage Bicep Deploy'
@@ -58,4 +58,4 @@ jobs:
       - name: az bicep deploy
         working-directory: '${{github.workspace}}/src/bicep'
         run: |
-            az deployment group create --resource-group APIMTesting --template-file ./storage_account.bicep
+            az deployment group create --resource-group APIMTesting --template-file ./storage_account.bicep --parameters @parameters.json
